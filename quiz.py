@@ -1,6 +1,6 @@
 class Quiz:
-    def __init__(self):
-        self.question = 'helloworld'
+    def __init__(self, question):
+        self.question = question
         self.length = len(self.question)
         self.health = 5
         self.index = []
@@ -25,3 +25,6 @@ class Quiz:
         for index in range(len(self.question)):
             if index in self.index:
                 self.dis[index] = self.question[index]
+
+    def gameover(self):
+        return self.health != 0
